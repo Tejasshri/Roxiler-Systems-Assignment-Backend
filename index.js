@@ -137,17 +137,17 @@ app.get("/all-statistics", async (request, response) => {
     const { month = 3 } = request.query;
 
     const api1Response = await fetch(
-      `http://localhost:3001/statistics?month=${month}`
+      `https://backendof.onrender.com/statistics?month=${month}`
     );
     const api1Data = await api1Response.json();
 
     const api2Response = await fetch(
-      `http://localhost:3001/items?month=${month}`
+      `https://backendof.onrender.com/items?month=${month}`
     );
     const api2Data = await api2Response.json();
 
     const api3Response = await fetch(
-      `http://localhost:3001/categories?month=${month}`
+      `https://backendof.onrender.com/categories?month=${month}`
     );
     const api3Data = await api3Response.json();
 
